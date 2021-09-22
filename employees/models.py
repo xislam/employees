@@ -16,7 +16,7 @@ class Departments(MPTTModel):
         super(Departments, self).save(*args, **kwargs)
 
     def __str__(self):
-        return str(self.get_level())
+        return self.name
 
     class Meta:
         verbose_name_plural = 'Departments'
@@ -29,6 +29,7 @@ class Departments(MPTTModel):
 
 
 class Employee(models.Model):
+    """employee data and link with the department"""
     full_name = models.CharField(max_length=70, verbose_name="full_name")
     position = models.CharField(max_length=50, verbose_name="position")
     employment_date = models.DateField(verbose_name="employment date")
