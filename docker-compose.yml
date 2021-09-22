@@ -12,7 +12,7 @@ services:
   migrations:
     build: .
     image: app
-    command: python manage.py migrate
+    command: bash -c "python manage.py makemigrations & python manage.py migrate"
     volumes:
       - .:/code
     links:

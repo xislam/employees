@@ -10,5 +10,5 @@ uploads
 *.sqlite3
 settings_local.py
 data
-venv
+env
 .idea
